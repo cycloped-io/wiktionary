@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = "wiktionary"
-  s.version = "0.1.0"
+  s.version = "0.1.1"
   s.date = "#{Time.now.strftime("%Y-%m-%d")}"
   s.required_ruby_version = '>= 2.0.0'
   s.authors = ['Krzysztof Wróbel','Aleksander Smywiński-Pohl']
@@ -16,6 +16,8 @@ Gem::Specification.new do |s|
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.require_path = "lib"
+
+  s.add_dependency("unicode_utils")
 
   s.add_development_dependency("rspec", [">= 3.2.0","< 4.0.0"])
   s.add_development_dependency("rake", [">= 10.4.0","< 11.0.0"])

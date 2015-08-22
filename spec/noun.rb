@@ -25,5 +25,7 @@ RSpec.describe Wiktionary::Noun do
     expect(@nouns.singularize("politics")).to include "politics"
     expect(@nouns.singularize("oxen")).to include "ox"
     expect(@nouns.singularize("feet")).to include "foot"
+    expect(@nouns.singularize("Dogs")).to include "Dog"
+    expect(@nouns.singularize("Γ rays")).to include "Γ ray"
   end
 end
