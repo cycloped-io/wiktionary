@@ -53,6 +53,19 @@ module Wiktionary
       result
     end
 
+    # Singularize using Wiktionary data. The result is an array of Strings.
+    def singularize_name(name, head)
+      names = []
+      singularized_heads = singularize(head)
+      if singularized_heads
+        singularized_heads.each do |singularized_head|
+          names << name.sub(/\b#{Regexp.quote(head)}\b/, singularized_head)
+        end
+      end
+      names << name if names.empty?
+      names
+    end
+
     private
 
     def load_files(path)
