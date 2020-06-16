@@ -20,6 +20,6 @@ Gem::Specification.new do |s|
   s.add_dependency("unicode_utils")
 
   s.add_development_dependency("rspec", [">= 3.2.0","< 4.0.0"])
-  s.add_development_dependency("rake", [">= 10.4.0","< 11.0.0"])
+  s.add_development_dependency "rake", ">= 12.3.3"
 end
 
